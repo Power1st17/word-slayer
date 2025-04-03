@@ -26,7 +26,7 @@ const WordSlayer: React.FC = () => {
   const [battleInProgress, setBattleInProgress] = useState<boolean>(false);
   const [winner, setWinner] = useState<string | null>(null);
   const [damageDealt, setDamageDealt] = useState<number>(0);
-  const [damageToLoser, setDamageToLoser] = useState<number>(0);
+  // const [damageToLoser, setDamageToLoser] = useState<number>(0);
   const [roundSummaryReady, setRoundSummaryReady] = useState<boolean>(false);
 
   function isValidWord(word: string): boolean {
@@ -62,7 +62,7 @@ const WordSlayer: React.FC = () => {
     return [...word].reduce((sum, letter) => sum + (LETTER_POWER[letter] || 0), 0);
   }
 
-  function handleLetterClick(letter: string, idx: number): void {
+  function handleLetterClick(letter: string, _: number): void {
     if (inputWord.includes(letter)) {
       setInputWord((prev) => {
         const newWord = prev.replace(letter, "");
