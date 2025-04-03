@@ -1,0 +1,26 @@
+.sprite {
+  width: 96px;  /* Adjust size */
+  height: 96px;
+  background-size: cover;
+}
+
+.player-sprite {
+  background-position: 0px 0px;
+}
+
+.bot-sprite {
+  background-position: 0px 0px;
+}
+
+/* Attack animation */
+@keyframes attack {
+  0% { background-position: 0px 0px; }
+  25% { background-position: -96px 0px; }
+  50% { background-position: -192px 0px; }
+  75% { background-position: -288px 0px; }
+  100% { background-position: -384px 0px; }
+}
+
+.attack-animation {
+  animation: attack 0.8s steps(4) forwards;
+}
